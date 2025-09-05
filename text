@@ -1,0 +1,7 @@
+/ → should return "Welcome to Ecommerce API"
+
+/products/ → returns all products
+
+/orders/ → returns all orders
+
+/auth/register → returns register form (if you added it)

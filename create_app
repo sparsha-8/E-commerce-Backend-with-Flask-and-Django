@@ -1,0 +1,15 @@
+def create_app():
+    app = Flask(__name__)
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///ecommerce.db'
+    db.init_app(app)
+
+    # register blueprints
+    app.register_blueprint(product_bp, url_prefix="/api/products")
+    app.register_blueprint(auth_bp, url_prefix="/auth")
+
+    # ✅ add home route here
+    @app.route("/")
+    def home():
+        return {"message": "Welcome to the E-commerce API!"}
+
+    return app

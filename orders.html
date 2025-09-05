@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orders</title>
+</head>
+<body>
+    <h1>Orders</h1>
+    <ul>
+        {% for order in orders %}
+            <li>Order ID: {{ order.id }} | User: {{ order.user_id }} | Total: ₹{{ order.total_amount }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
